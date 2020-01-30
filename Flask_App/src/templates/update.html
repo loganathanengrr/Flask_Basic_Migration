@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <h2>Update Task</h2>
+    <form method= "POST" action="/{{task.id}}/update">
+      Task Name:<br>
+      <input type="text" name="taskname" value = "{{ task.task_name }}">
+      <br><br>
+      <input type="submit" value="Update">
+    </form> 
+  </body>
+</html>

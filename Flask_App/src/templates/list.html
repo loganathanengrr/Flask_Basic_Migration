@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <h2>Create Task</h2>
+    <form method= "POST">
+      Task Name:<br>
+      <input type="text" name="taskname">
+      <br><br>
+      <input type="submit" value="Add">
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Task Name</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+        <tbody>
+          {% for task in tasks %}
+          <tr>
+            <td>{{ task.id}}</td>
+            <td>{{ task.task_name }}</td>
+            <td><a href="/{{ task.id }}/update">Edit</a></td>
+            <td><a href="/{{ task.id }}/delete">Delete</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+    </table> 
+</html>
